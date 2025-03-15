@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from lending.views import send_application
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("send-application/", send_application, name="send_application"),
 ]
